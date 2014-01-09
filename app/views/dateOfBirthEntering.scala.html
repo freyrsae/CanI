@@ -1,0 +1,27 @@
+@(theForm: Form[_])
+
+@import helper._
+@import helper.twitterBootstrap._
+@import Utils.Constants
+@import collection.JavaConversions._
+
+
+@helper.form(action = routes.Application.doCani(), 'class -> "form-inline") {
+    <p>Enter your date of birth:</p>
+    <div class="row">
+        @customSelect(theForm("day1"), Constants.dayList(), "Day:", true)
+        @customSelect(theForm("month1"), Constants.getMonthList, "Month:")
+        @customSelect(theForm("year1"), Constants.yearList(), "Year:")
+    </div>
+    <br>
+    <p>Enter someone elses date of birth:</p>
+    <p id="currentCeleb"></p>
+    <div class="row">
+        @customSelect(theForm("day2"), Constants.dayList(), "Day:", true)
+        @customSelect(theForm("month2"), Constants.getMonthList, "Month:")
+        @customSelect(theForm("year2"), Constants.yearList(), "Year:")
+    </div>
+
+    <button id="calcButton" type="submit" class="btn btn-primary btn-lg col-md-2 col-md-offset-5">Calculate</button>
+
+}

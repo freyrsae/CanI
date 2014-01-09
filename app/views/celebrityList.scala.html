@@ -1,0 +1,31 @@
+@()
+
+@import Utils.Celebrities
+@import Utils.DateUtils
+
+@map = @{Celebrities.getCelebritiesMap}
+@firstBreak = @{Celebrities.firstBreak(map.size)}
+@secondBreak = @{Celebrities.secondBreak(map.size)}
+
+@celebLine(name: String, bday: String) = {<li><a href="#"><span hidden class="t">@bday</span><span class="n">@name</span>, @DateUtils.formatDateToHuman(bday)</a></li>}
+
+<h4>Popular search results</h4>
+<div class="row">
+    <ul class="list-unstyled celebList">
+    <div class="col-lg-4">
+        @for((name, bday) <- map.slice(0,firstBreak)){
+            @celebLine(name, bday)
+        }
+    </div>
+    <div class="col-lg-4">
+        @for((name, bday) <- map.slice(firstBreak, secondBreak)){
+            @celebLine(name, bday)
+        }
+    </div>
+    <div class="col-lg-4">
+        @for((name, bday) <- map.slice(secondBreak, map.size)){
+            @celebLine(name, bday)
+        }
+    </div>
+    </ul>
+</div>

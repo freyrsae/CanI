@@ -1,0 +1,13 @@
+@(caniResults : Models.CaniResults, theForm: Form[_])
+
+@main {
+
+    @results(caniResults)
+    @dateOfBirthEntering(theForm)
+    <br>
+    <br>
+    @searchBox()
+    @celebrityList()
+    @scripts()
+
+}

@@ -1,0 +1,12 @@
+@(field: Field, opt: List[String], label: String, offset: Boolean = false)
+
+@import helper._
+@import helper.twitterBootstrap._
+
+<div class="col-md-2 @if(offset){col-md-offset-3}">
+    @helper.select(
+        field,
+        options(opt),
+        '_label -> label,
+        'class -> "form-control" )
+</div>
