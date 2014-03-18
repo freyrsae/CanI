@@ -12,6 +12,7 @@ import play.data.Form;
 import play.mvc.*;
 
 import views.html.*;
+import views.html.about;
 import views.html.frontPage;
 
 import java.net.URLEncoder;
@@ -33,14 +34,6 @@ public class Application extends Controller {
         }
 
         return ok(frontPage.render(results, datesOfBirthForm.fill(datesOfBirth)));
-    }
-
-    public static Result caniDate(String date){
-        return TODO;
-    }
-
-    public static Result caniName(String name){
-        return TODO;
     }
 
     public static Result doCani(){
@@ -70,6 +63,10 @@ public class Application extends Controller {
             System.out.println(e);
             return internalServerError("fail");
         }
+    }
+
+    public static Result about(){
+        return ok(about.render());
     }
 
 }

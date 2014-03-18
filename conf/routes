@@ -4,10 +4,10 @@
 
 # Home page
 GET         /                    controllers.Application.cani(d1: String ?= "", d2: String ?= "")
-GET         /celeb/:name         controllers.Application.caniName(name: String)
 POST        /                    controllers.Application.doCani()
 GET         /findBirthday        controllers.Application.findBirthDay(name: String ?= "")
-GET         /search           controllers.Application.search(term: String ?= "")
+GET         /search              controllers.Application.search(term: String ?= "")
+GET         /about               controllers.Application.about()
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file        controllers.Assets.at(path="/public", file)
