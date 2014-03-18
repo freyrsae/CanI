@@ -100,7 +100,6 @@ public class Celebrities {
         addToMap(celebMap, BRAD_PITT);
         addToMap(celebMap, CAMERON_DIAZ);
         addToMap(celebMap, ADELE);
-        addToMap(celebMap, BARACK_OBAMA);
         addToMap(celebMap, JUSTIN_TIMBER_LAKE);
         addToMap(celebMap, BOB_MARLEY);
         addToMap(celebMap, AKON);
