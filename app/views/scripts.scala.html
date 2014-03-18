@@ -46,7 +46,10 @@ $(function() {
 currentCeleb();
 $( "#searchInput" ).autocomplete({
 source: "/search",
-select: function(){$("#searchButton" ).trigger("click");}
+select: function(event, ui){
+$("#searchInput").val(ui.item.value);
+$("#searchButton" ).trigger("click");
+}
 });
 });
 
