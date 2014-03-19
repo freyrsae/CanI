@@ -6,7 +6,7 @@
 @import collection.JavaConversions._
 
 
-@helper.form(action = routes.Application.doCani(), 'class -> "form-inline") {
+@helper.form(action = routes.Application.doCani()) {
     <p>Enter your date of birth:</p>
     <div class="row">
         @customSelect(theForm("day1"), Constants.dayList(), "Day:", true)

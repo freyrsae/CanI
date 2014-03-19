@@ -3,10 +3,10 @@
 @import helper._
 @import helper.twitterBootstrap._
 
-<div class="col-md-2 @if(offset){col-md-offset-3}">
+<div class="col-sm-2 @if(offset){col-sm-offset-3}">
     @helper.select(
         field,
         options(opt),
         '_label -> label,
-        'class -> "form-control" )
+        'class -> "form-control input-block-level" )
 </div>
