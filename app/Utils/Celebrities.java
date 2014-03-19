@@ -18,7 +18,7 @@ import java.util.Map;
  */
 public class Celebrities {
 
-    private static LinkedHashMap<String, String> celebMap = new LinkedHashMap<>();
+    private static LinkedHashMap<String, String> celebMap = new LinkedHashMap<String, String>();
     public static final String KATE_MIDDLETON = "Kate Middleton";
 
     public static final String PRINCE_WILLIAM = "Prince William";
